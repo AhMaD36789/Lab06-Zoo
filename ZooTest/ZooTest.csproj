@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Lab06-Zoo\Lab06-Zoo.csproj" />
+  </ItemGroup>
+
 </Project>
