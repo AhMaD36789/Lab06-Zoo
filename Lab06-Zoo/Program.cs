@@ -116,7 +116,6 @@
             Console.WriteLine("The mammal is grooming itself.");
         }
     }
-
     public abstract class Reptiles : Animal
     {
         protected virtual string ScaleColor { get; set; }
@@ -126,7 +125,6 @@
         public abstract void LayEggs();
         public abstract void Swim();
     }
-
     public class Crocodile : Reptiles
     {
         protected override string ScaleColor { get; set; } = "Olive green";
