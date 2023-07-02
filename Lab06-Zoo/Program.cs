@@ -13,9 +13,9 @@
         protected abstract string Species { get; set; }
         protected abstract string Habitat { get; set; }
         protected abstract string Diet { get; set; }
-        public abstract void Eat();
-        public abstract void Sleep();
-        public abstract void Move();
+        public abstract string Eat();
+        public abstract string Sleep();
+        public abstract string Move();
 
     }
     public abstract class Mammals : Animal
@@ -23,14 +23,14 @@
         protected abstract int OffspringNum { get; set; }
         protected abstract string FurColor { get; set; }
         protected abstract int Gestation { get; set; }
-        public virtual void Nurse()
+        public virtual string Nurse()
         {
-            Console.WriteLine("The mammal is nursing its young.");
+            return ("The mammal is nursing its young.");
         }
 
-        public virtual void Groom()
+        public virtual string Groom()
         {
-            Console.WriteLine("The mammal is grooming itself.");
+            return ("The mammal is grooming itself.");
         }
 
     }
@@ -45,34 +45,34 @@
         protected override string Species { get; set; } = "Panthera leo";
         protected override string Habitat { get; set; } = "Savannah";
         protected override string Diet { get; set; } = "Carnivoure";
-        public override void Eat()
+        public override string Eat()
         {
-            Console.WriteLine("The lion is eating meat.");
+            return ("The lion is eating meat.");
         }
 
-        public override void Sleep()
+        public override string Sleep()
         {
-            Console.WriteLine("The lion sleeps 18-20 hours a day");
+            return ("The lion sleeps 18-20 hours a day");
         }
 
-        public override void Move()
+        public override string Move()
         {
-            Console.WriteLine("The lion runs at a top speed of 80 km/h .");
+            return ("The lion runs at a top speed of 80 km/h .");
         }
 
-        public void Roar()
+        public string Roar()
         {
-            Console.WriteLine("The lion is ROAAARING");
+            return ("The lion is ROAAARING");
         }
 
-        public void Play()
+        public string Play()
         {
-            Console.WriteLine("the lions play really rough");
+            return ("the lions play really rough");
         }
 
-        public override void Nurse()
+        public override string Nurse()
         {
-            Console.WriteLine("The lion is nursing its young.");
+            return ("The lion is nursing its young.");
         }
     }
     public class Tiger : Mammals
@@ -86,34 +86,34 @@
         protected override string Species { get; set; } = "Panthera tigris";
         protected override string Habitat { get; set; } = "forest";
         protected override string Diet { get; set; } = "Carnivoure";
-        public override void Eat()
+        public override string Eat()
         {
-            Console.WriteLine("The tiger is eating meat.");
+            return ("The tiger is eating meat.");
         }
 
-        public override void Sleep()
+        public override string Sleep()
         {
-            Console.WriteLine("The tiger sleeps 18-20 hours a day");
+            return ("The tiger sleeps 18-20 hours a day");
         }
 
-        public override void Move()
+        public override string Move()
         {
-            Console.WriteLine("The lion runs at a top speed of 65 km/h .");
+            return ("The lion runs at a top speed of 65 km/h .");
         }
 
-        public void Roar()
+        public string Roar()
         {
-            Console.WriteLine("The tiger is ROAAARING");
+            return ("The tiger is ROAAARING");
         }
 
-        public void Play()
+        public string Play()
         {
-            Console.WriteLine("the tiger sneaks really well. LOOK BEHIND YOU!!");
+            return ("the tiger sneaks really well. LOOK BEHIND YOU!!");
         }
 
-        public override void Groom()
+        public override string Groom()
         {
-            Console.WriteLine("The mammal is grooming itself.");
+            return ("The mammal is grooming itself.");
         }
     }
     public abstract class Reptiles : Animal
@@ -122,8 +122,8 @@
         protected virtual string EggType { get; set; }
         protected virtual int NumOfLegs { get; set; }
 
-        public abstract void LayEggs();
-        public abstract void Swim();
+        public abstract string LayEggs();
+        public abstract string Swim();
     }
     public class Crocodile : Reptiles
     {
@@ -134,29 +134,29 @@
         protected override string Habitat { get; set; } = "Freshwater";
         protected override string Diet { get; set; } = "Carnivore";
 
-        public override void LayEggs()
+        public override string LayEggs()
         {
-            Console.WriteLine("The crocodile is laying eggs.");
+            return ("The crocodile is laying eggs.");
         }
 
-        public override void Swim()
+        public override string Swim()
         {
-            Console.WriteLine("The crocodile is swimming.");
+            return ("The crocodile is swimming.");
         }
 
-        public override void Eat()
+        public override string Eat()
         {
-            Console.WriteLine("The crocodile is eating meat.");
+            return ("The crocodile is eating meat.");
         }
 
-        public override void Sleep()
+        public override string Sleep()
         {
-            Console.WriteLine("The crocodile sleeps with one eye open.");
+            return ("The crocodile sleeps with one eye open.");
         }
 
-        public override void Move()
+        public override string Move()
         {
-            Console.WriteLine("The crocodile walks on four legs and can run up to 17 km/h on land.");
+            return ("The crocodile walks on four legs and can run up to 17 km/h on land.");
         }
     }
     public class Python : Reptiles
@@ -168,29 +168,29 @@
         protected override string Habitat { get; set; } = "Tropical";
         protected override string Diet { get; set; } = "Carnivore";
 
-        public override void LayEggs()
+        public override string LayEggs()
         {
-            Console.WriteLine("The python is laying eggs.");
+            return ("The python is laying eggs.");
         }
 
-        public override void Swim()
+        public override string Swim()
         {
-            Console.WriteLine("The python is swimming.");
+            return ("The python is swimming.");
         }
 
-        public override void Eat()
+        public override string Eat()
         {
-            Console.WriteLine("The python is eating meat.");
+            return ("The python is eating meat.");
         }
 
-        public override void Sleep()
+        public override string Sleep()
         {
-            Console.WriteLine("Fun fact: Most ball pythons sleep during the day in their hide.");
+            return ("Fun fact: Most ball pythons sleep during the day in their hide.");
         }
 
-        public override void Move()
+        public override string Move()
         {
-            Console.WriteLine("The python slithers on its belly.");
+            return ("The python slithers on its belly.");
         }
     }
     public abstract class Arachnida : Animal
@@ -199,14 +199,14 @@
         protected virtual string VenomType { get; set; }
         protected virtual string BodyColor { get; set; }
 
-        public virtual void SpinWeb()
+        public virtual string SpinWeb()
         {
-            Console.WriteLine("The arachnid is spinning a web.");
+            return ("The arachnid is spinning a web.");
         }
 
-        public virtual void InjectVenom()
+        public virtual string InjectVenom()
         {
-            Console.WriteLine("The arachnid is injecting venom.");
+            return ("The arachnid is injecting venom.");
         }
     }
     public class Spider : Arachnida
@@ -218,29 +218,29 @@
         protected override string Habitat { get; set; } = "Cosmopolitan";
         protected override string Diet { get; set; } = "Carnivore";
 
-        public override void SpinWeb()
+        public override string SpinWeb()
         {
-            Console.WriteLine("The spider is spinning a web.");
+            return ("The spider is spinning a web.");
         }
 
-        public override void InjectVenom()
+        public override string InjectVenom()
         {
-            Console.WriteLine("The spider is injecting venom.");
+            return ("The spider is injecting venom.");
         }
 
-        public override void Eat()
+        public override string Eat()
         {
-            Console.WriteLine("The spider is eating an insect.");
+            return ("The spider is eating an insect.");
         }
 
-        public override void Sleep()
+        public override string Sleep()
         {
-            Console.WriteLine("The spider sleeps during the day.");
+            return ("The spider sleeps during the day.");
         }
 
-        public override void Move()
+        public override string Move()
         {
-            Console.WriteLine("The spider crawls on its eight legs.");
+            return ("The spider crawls on its eight legs.");
         }
     }
 }
