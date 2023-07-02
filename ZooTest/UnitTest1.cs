@@ -12,10 +12,10 @@ namespace ZooTest
             Lion lion = new Lion();
 
             // Act
-            lion.Roar();
+            string result = lion.Roar();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The lion is ROAAARING", result);
         }
 
         [Fact]
@@ -25,10 +25,10 @@ namespace ZooTest
             Lion lion = new Lion();
 
             // Act
-            lion.Play();
+            string result = lion.Play();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("the lions play really rough", result);
         }
 
         [Fact]
@@ -38,10 +38,10 @@ namespace ZooTest
             Tiger tiger = new Tiger();
 
             // Act
-            tiger.Roar();
+            string result = tiger.Roar();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The tiger is ROAAARING", result);
         }
 
         [Fact]
@@ -51,11 +51,12 @@ namespace ZooTest
             Tiger tiger = new Tiger();
 
             // Act
-            tiger.Play();
+            string result = tiger.Play();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("the tiger sneaks really well. LOOK BEHIND YOU!!", result);
         }
+
         [Fact]
         public void CrocodileLayEggsTest()
         {
@@ -63,11 +64,12 @@ namespace ZooTest
             Crocodile crocodile = new Crocodile();
 
             // Act
-            crocodile.LayEggs();
+            string result = crocodile.LayEggs();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The crocodile is laying eggs.", result);
         }
+
         [Fact]
         public void CrocodileSwimTest()
         {
@@ -75,11 +77,12 @@ namespace ZooTest
             Crocodile crocodile = new Crocodile();
 
             // Act
-            crocodile.Swim();
+            string result = crocodile.Swim();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The crocodile is swimming.", result);
         }
+
 
         [Fact]
         public void PythonLayEggsTest()
@@ -88,10 +91,10 @@ namespace ZooTest
             Python python = new Python();
 
             // Act
-            python.LayEggs();
+            string result = python.LayEggs();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The python is laying eggs.", result);
         }
 
         [Fact]
@@ -101,11 +104,12 @@ namespace ZooTest
             Python python = new Python();
 
             // Act
-            python.Swim();
+            string result = python.Swim();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The python is swimming.", result);
         }
+
         [Fact]
         public void SpiderSpinWebTest()
         {
@@ -113,10 +117,10 @@ namespace ZooTest
             Spider spider = new Spider();
 
             // Act
-            spider.SpinWeb();
+            string result = spider.SpinWeb();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The spider is spinning a web.", result);
         }
 
         [Fact]
@@ -126,10 +130,10 @@ namespace ZooTest
             Spider spider = new Spider();
 
             // Act
-            spider.InjectVenom();
+            string result = spider.InjectVenom();
 
             // Assert
-            Assert.True(true);
+            Assert.Equal("The spider is injecting venom.", result);
         }
     }
 }
