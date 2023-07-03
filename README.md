@@ -6,7 +6,9 @@ this is a virtual zoo console application that demonstartes inheritance in C# by
 
 ## UML
 
+
 ![temp](./1.png)
+
 
 ## Technical Documentation
 
