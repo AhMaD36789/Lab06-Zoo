@@ -4,9 +4,31 @@
     {
         static void Main(string[] args)
         {
-            Lion ammar = new Lion();
-            ammar.Roar();
+            Lion lion = new Lion();
+            Tiger tiger = new Tiger();
+            Crocodile crocodile = new Crocodile();
+            Python python = new Python();
+            Spider spider = new Spider();
+            lion.Drink();
+            tiger.Hide();
+            crocodile.Drink();
+            crocodile.Hide();
+            spider.Drink();
+            python.Hide();
         }
+    }
+
+    // interface definition lab07
+
+    //<interface>
+    public interface IAnimalDrinking
+    {
+        string Drink();
+    }
+    //<interface>
+    public interface IAnimalHide
+    {
+        string Hide();
     }
     public abstract class Animal
     {
@@ -34,7 +56,7 @@
         }
 
     }
-    public class Lion : Mammals
+    public class Lion : Mammals, IAnimalDrinking
     {
         protected int EatsEvery { get; set; } = 72;
         protected string ManeColor { get; set; } = "brown";
@@ -45,6 +67,12 @@
         protected override string Species { get; set; } = "Panthera leo";
         protected override string Habitat { get; set; } = "Savannah";
         protected override string Diet { get; set; } = "Carnivoure";
+
+        public string Drink()
+        {
+            Console.WriteLine("Lions dont drink water often");
+            return "Lions dont drink water often";
+        }
         public override string Eat()
         {
             return ("The lion is eating meat.");
@@ -75,7 +103,7 @@
             return ("The lion is nursing its young.");
         }
     }
-    public class Tiger : Mammals
+    public class Tiger : Mammals, IAnimalHide
     {
         protected int EatsEvery { get; set; } = 2;
         protected string StripePattern { get; set; } = "vertical";
@@ -86,6 +114,12 @@
         protected override string Species { get; set; } = "Panthera tigris";
         protected override string Habitat { get; set; } = "forest";
         protected override string Diet { get; set; } = "Carnivoure";
+
+        public string Hide()
+        {
+            Console.WriteLine("Tigers are so good at hiding when hunting. they can be called one of the best hide and seek players");
+            return "Tigers are so good at hiding when hunting. they can be called one of the best hide and seek players";
+        }
         public override string Eat()
         {
             return ("The tiger is eating meat.");
@@ -125,7 +159,7 @@
         public abstract string LayEggs();
         public abstract string Swim();
     }
-    public class Crocodile : Reptiles
+    public class Crocodile : Reptiles, IAnimalHide, IAnimalDrinking
     {
         protected override string ScaleColor { get; set; } = "Olive green";
         protected override string EggType { get; set; } = "Hard-shelled";
@@ -133,6 +167,14 @@
         protected override string Species { get; set; } = "Crocodylus niloticus";
         protected override string Habitat { get; set; } = "Freshwater";
         protected override string Diet { get; set; } = "Carnivore";
+
+        public string Hide()
+
+        {
+
+            Console.WriteLine("Crocodiles are so good at moving without disrupting the water one can be in this river here and i wouldnt know it");
+            return "Crocodiles are so good at moving without disrupting the water one can be in this river here and i wouldnt know it";
+        }
 
         public override string LayEggs()
         {
@@ -158,8 +200,14 @@
         {
             return ("The crocodile walks on four legs and can run up to 17 km/h on land.");
         }
+
+        public string Drink()
+        {
+            Console.WriteLine("crocodiles live in rivers they're always drinking water");
+            return "crocodiles live in rivers they're always drinking water";
+        }
     }
-    public class Python : Reptiles
+    public class Python : Reptiles, IAnimalHide
     {
         protected override string ScaleColor { get; set; } = "Green";
         protected override string EggType { get; set; } = "Leathery";
@@ -168,6 +216,11 @@
         protected override string Habitat { get; set; } = "Tropical";
         protected override string Diet { get; set; } = "Carnivore";
 
+        public string Hide()
+        {
+            Console.WriteLine("pythons dont hide on trees. they live there");
+            return "pythons dont hide on trees. they live there";
+        }
         public override string LayEggs()
         {
             return ("The python is laying eggs.");
@@ -209,7 +262,7 @@
             return ("The arachnid is injecting venom.");
         }
     }
-    public class Spider : Arachnida
+    public class Spider : Arachnida, IAnimalDrinking
     {
         protected override int NumOfLegs { get; set; } = 8;
         protected override string VenomType { get; set; } = "Neurotoxic";
@@ -217,6 +270,12 @@
         protected override string Species { get; set; } = "Araneae";
         protected override string Habitat { get; set; } = "Cosmopolitan";
         protected override string Diet { get; set; } = "Carnivore";
+
+        public string Drink()
+        {
+            Console.WriteLine("spiders drink the blood of victims not water");
+            return "spiders drink the blood of victims not water";
+        }
 
         public override string SpinWeb()
         {
